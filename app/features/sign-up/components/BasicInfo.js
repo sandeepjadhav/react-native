@@ -1,8 +1,9 @@
 import React from 'react';
-import { StyleSheet, TextInput, Text, View, Button } from 'react-native';
+import { TextInput, StyleSheet, Text, View, Button } from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
-class SignUp extends React.Component{
+
+class BasicInfo extends React.Component{
   constructor(props) {
     super(props);
     this.state = {text: ''};
@@ -14,26 +15,27 @@ class SignUp extends React.Component{
       <View style={styles.textWrapper}>
         <TextInput
           style={styles.textInput}
-          placeholder="Email"
+          placeholder="Basic"
           onChangeText={(text) => this.setState({text})}
           value={this.state.text}
         />
 
         <TextInput
           style={styles.textInput}
-          placeholder="Mobile"
+          placeholder="Basic"
           onChangeText={(text) => this.setState({text})}
           value={this.state.text}
         />
 
-        <Button title="Continue" onPress={() => this.props.navigation.navigate('BasicInfo')}></Button>
+        <Button title="Continue" onPress={() => this.props.navigation.navigate('BasicInfo1')}></Button>
       </View>
     </View>
     );
   }
 }
 
-export default SignUp;
+export default BasicInfo;
+
 
 const styles = StyleSheet.create({
   container: { flex: 1 },

@@ -25,22 +25,23 @@ class SignIn extends React.Component{
                   onChangeText={(text) => this.setState({text})}
                   value={this.state.text}
                 />
-                <Text>FORGOT PASSORD?</Text>
+                <Text>FORGOT PASSWORD?</Text>
 
-                <Button title="Sign in"></Button>
+                <Button title="Sign in" onPress={() => this.props.navigation.navigate('SignUp')}></Button>
                 <Text>Skip for now</Text>
               </View>
             </View>
           );
     }
-    
+
 };
 const styles = StyleSheet.create({
   container: { flex: 1 },
   textWrapper: {
     height: hp('70%'), // 70% of height device screen
     width: wp('80%'),   // 80% of width device screen
-    marginLeft: wp('10%')
+    marginLeft: wp('10%'),
+    marginTop: wp('40%')
   },
   textInput: {
     height: 55,
